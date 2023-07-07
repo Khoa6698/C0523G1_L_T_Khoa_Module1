@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1px" style="width:80%" >
+  <tr>
+    <td>Amount</td>
+    <td>From Currency</td>
+    <td>To Currency</td>
+  </tr>
+  <tr>
+    <td>
+       <label for="amount"></label>
+      <input type="text" id="amount">
+    </td>
+    <td>
+      <label for="fromCurrency"></label>
+      <select id="fromCurrency">
+        <option value="VND" >Việt Nam</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <label for="toCurrency"></label>
+      <select id="toCurrency">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+
+  </tr>
+  <tr>
+    <td style="background: #2379c4">
+      <button onclick="ConvertMoney()">Convert</button>
+    </td>
+  </tr>
+</table>
+<div id="result"></div>
+<script>
+  function ConvertMoney() {
+    let amount = document.getElementById("amount").value;
+    let fromCurrency = document.getElementById("fromCurrency").value;
+    let toCurrency = document.getElementById("toCurrency").value;
+
+    if (fromCurrency == "USD" && toCurrency == "VND") {
+      document.getElementById("result").innerHTML=  (amount * 23000).toString()
+    }
+    if (fromCurrency == "VND" && toCurrency == "USD") {
+      document.getElementById("result").innerHTML=  (amount / 23000).toString()
+    }
+  }
+
+
+</script>
+</body>
+</html>
