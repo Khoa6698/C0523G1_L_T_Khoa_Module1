@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Số tiền ban đầu.");
+    let month = +prompt("Số tháng cho vay.");
+    let lai = +prompt("Lãi Xuất.");
+    tienlai = money*month*(lai/100);
+    if (month < 6){
+        alert(tienlai * (9 / 100 ));
+    } else if (month < 12) {
+        alert(tienlai * (6 / 100));
+    }else {
+        alert(tienlai * (3/100));
+    }
+    document.write("Tiền lai ngân hàng =" + tienlai);
+</script>
+</body>
+</html>
