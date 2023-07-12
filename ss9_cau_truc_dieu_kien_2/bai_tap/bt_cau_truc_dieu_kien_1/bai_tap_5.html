@@ -9,11 +9,13 @@
     let kt = +prompt("Bài kiểm tra.");
     let tgk = +prompt("Thi giữa kì.");
     let bt = +prompt("Bài Thi.");
-    if ((kt + tgk + bt)/3 < 6 ) {
-        alert("Học sinh trung bình")
-    }else if ((kt + tgk + bt)/3 < 8 ) {
+    if ((kt + tgk + bt)/3 < 4 ) {
+        alert("Học sinh yếu");
+    }else if ((kt + tgk + bt)/3 < 6 ) {
+        alert("Học sinh trung bình.");
+    } else if((kt + tgk + bt)/3 < 8 ) {
         alert("Học sinh khá.");
-    } else {
+    }else if ((kt + tgk + bt)/3 < 10 ) {
         alert("Học sinh giỏi.");
     }
 </script>
