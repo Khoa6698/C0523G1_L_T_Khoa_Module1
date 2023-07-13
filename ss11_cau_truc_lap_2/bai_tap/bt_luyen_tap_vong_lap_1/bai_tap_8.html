@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<button onclick="playGame">Start</button>
+<body>
+<script>
+    function playgame() {
+
+        let soDau = +prompt("Số đầu.");
+        let soCuoi = +prompt("Số cuối.")
+        let random = Math.round(Math.random() * (soCuoi - soDau) + (soCuoi - soDau));
+        let soLan = 1
+        do {
+            let number = +prompt("Số bạn nghĩ.");
+            if (number === random) {
+                alert("Kết quả đúng.");
+                break;
+            } else if (number < random) {
+                alert("Bạn cần tăng lên.");
+            } else if (number > random) {
+                alert("Bạn cần giảm xuống");
+            }
+            soLan++
+        } while (soLan <= 3);
+    }
+</script>
+</body>
+</html>
