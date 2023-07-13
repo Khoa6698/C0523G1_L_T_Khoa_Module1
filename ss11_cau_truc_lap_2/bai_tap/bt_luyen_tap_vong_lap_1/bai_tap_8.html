@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<button onclick="playGame">Start</button>
+<button onclick="playGame()">Start</button>
 <body>
 <script>
-    function playgame() {
+    function playGame() {
 
         let soDau = +prompt("Số đầu.");
         let soCuoi = +prompt("Số cuối.")
-        let random = Math.round(Math.random() * (soCuoi - soDau) + (soCuoi - soDau));
+        let random = Math.round(Math.random() * (soCuoi - soDau) + soDau);
         let soLan = 1
         do {
             let number = +prompt("Số bạn nghĩ.");
