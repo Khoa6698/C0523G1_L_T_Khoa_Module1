@@ -8,12 +8,19 @@
 <script>
     let oc;
     do {
-        oc = +prompt("nhập vào nhiệt độ");
+        oc = parseInt(prompt("Nhập vào nhiệt độ hiện tại: "));
+
         if (oc > 100) {
-            alert("Xin vui lòng giảm nhiệt độ.");
+            oc = parseInt(prompt("Vui lòng giảm nhiệt độ: "));
         }
-    } while (oc > 20);
-    document.write("Xin vui lòng tăng nhiệt độ.");
+
+        if (oc < 20) {
+            oc = parseInt(prompt("Vui lòng tăng nhiệt độ: "));
+        }
+
+    } while (oc > 100 || oc < 20);
+
+    document.write("Nhiệt độ hiện tại là: " + oc)
 </script>
 </body>
 </html>
