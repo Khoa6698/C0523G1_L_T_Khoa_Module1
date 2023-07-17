@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let wordsSample = "Le Tu Khoa".trim()
+  let wordsCount = 0
+  let isWord = false;
+  for (let i=0; i<wordsSample.length; i++) {
+    if (wordsSample[i] === ' ') {
+      isWord = false
+    }
+
+    if (!isWord) {
+      wordsCount++
+      isWord = true
+    }
+  }
+  document.write(wordsCount.toString())
+</script>
+</body>
+</html>

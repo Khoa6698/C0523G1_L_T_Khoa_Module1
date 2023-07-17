@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        let element = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng:"));
+        array.push(element);
+    }
+
+    let numberV = parseInt(prompt("Nhập số V cần tìm: "));
+    let exists = false;
+    let index;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === numberV) {
+            exists = true;
+            index = i;
+            break;
+        }
+    }
+
+    if (exists) {
+        array.splice(index, 1);
+        array[array.length - 1] = 0;
+        document.write("Mảng mới là: " + array);
+    } else {
+        document.write("V không nằm trong mảng");
+    }
+
+</script>
+</body>
+</html>

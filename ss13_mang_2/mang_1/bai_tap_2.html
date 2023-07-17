@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Mảng số nguyên: [2,30,20,5,4,8,25,50,12] </p>
+<p id="result"></p>
+<script>
+    let intArray = [2, 30, 20, 5, 4, 8, 25, 50, 12];
+    let intTemp = 0;
+    let index;
+    for (let i = 0; i < intArray.length; i++) {
+        if (intArray[i] > intTemp) {
+            intTemp = intArray[i];
+            index = i;
+        }
+    }
+    document.getElementById("result").innerHTML = intTemp.toString() + "vị trí thứ " + index;
+</script>
+</body>
+</html>

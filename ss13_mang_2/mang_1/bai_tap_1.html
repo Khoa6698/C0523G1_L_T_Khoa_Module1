@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Mảng số nguyên: [2,30,20,5,4,8,25,50,12] </p>
+<p id="result"></p>
+<script>
+    let intArray = [2, 30, 20, 5, 4, 8, 25, 50, 12];
+    let intCount = 0;
+    for (let i = 0; i < intArray.length; i++) {
+        if (intArray[i] > 10) {
+            intCount++;
+        }
+    }
+    document.getElementById("result").innerHTML = intCount.toString();
+</script>
+</body>
+</html>

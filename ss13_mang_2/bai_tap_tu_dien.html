@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="character">Nhập từ: </label>
+<input type="text" name="" id="character">
+<button onclick="transcript()">Dịch</button>
+<p id = "result"></p>
+<script>
+    function transcript() {
+        let arr_eng = ["banana", "ok", "yes", "pen", "like", "book"];
+        let arr_vie = ["chuối", "được", "đúng", "bút", "thích", "sách"];
+        let chuoi = document.getElementById("character").value;
+        let result;
+
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (chuoi !== arr_eng[i]) {
+                result = "Không tìm thấy kí tự này"
+            }
+        }
+
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (chuoi === arr_eng[i]) {
+                for (let j = 0; j < arr_vie.length; j++) {
+                    if (i === j) {
+                        result = arr_vie[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+</body>
+</html>

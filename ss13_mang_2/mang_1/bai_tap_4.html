@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayInit = [];
+    let arrayRevert = [];
+    let i = 0;
+    do {
+        let intElement = parseInt(prompt("Nhập vào số: "));
+        arrayInit.push(intElement);
+        i++;
+    } while (i < 6);
+
+    document.write("Mảng ban đầu: " + arrayInit.join(" "));
+
+    for (let j = arrayInit.length; j >= 0; j--) {
+        arrayRevert.push(arrayInit[j]);
+    }
+
+    document.write("Mảng đảo ngược: " + arrayRevert.join(" "));
+
+</script>
+</body>
+</html>

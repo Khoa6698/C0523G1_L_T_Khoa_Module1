@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soNguyen = +prompt("Nhập số nguyên :");
+    let number = [];
+    let count = 0;
+    for (let i = 0; i < soNguyen; i++) {
+        number[i] = +prompt("Nhập số" + (i + 1));
+        if (number[i] < 0) {
+            document.write(number[i] + "<br/>");
+            count++;
+
+        }
+
+    }
+    document.write("Số âm trong dãy =" + count);
+</script>
+</body>
+</html>

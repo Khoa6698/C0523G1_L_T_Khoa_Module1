@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    for (let i = 0; i < 10; i++) {
+        let element = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng A:"));
+        arrayA.push(element);
+    }
+
+    let arrayB = [];
+    for (let i = 0; i < 10; i++) {
+        let element = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng B:"));
+        arrayB.push(element);
+    }
+
+    function joinArrayABToC() {
+        let arrayC = [];
+
+        for (let i = 0; i < arrayA.length; i++) {
+            arrayC.push(arrayA[i]);
+        }
+
+        for (let i = 0; i < arrayB.length; i++) {
+            arrayC.push(arrayB[i]);
+        }
+
+        document.write(arrayC.join(", "))
+    }
+
+     joinArrayABToC();
+
+</script>
+</body>
+</html>

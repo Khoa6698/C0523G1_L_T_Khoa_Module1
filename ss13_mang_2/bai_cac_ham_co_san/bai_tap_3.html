@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("Nhập vào 1 chuỗi:");
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for(let i = 0; i < chuoi.length; i++) {
+        if(UPPER.includes(chuoi[i])) {
+            result.push(chuoi[i]);
+        }
+
+        if(LOWER.includes(chuoi[i])) {
+            result.push(chuoi[i].toUpperCase());
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>
