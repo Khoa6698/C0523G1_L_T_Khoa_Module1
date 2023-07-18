@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function playGame(answer) {
+        let result = "";
+        if (answer) {
+            result = "Chơi";
+        } else {
+            result = "Không chơi.";
+        }
+        return result;
+    }
+
+    let doYou = confirm("Có muốn chơi game không?");
+    let theAnswer = playGame(doYou);
+    alert(theAnswer);
+</script>
+</body>
+</html>
