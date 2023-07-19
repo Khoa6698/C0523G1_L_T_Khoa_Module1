@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Feet</label>
+    <input id="inputFeet" type="number" placeholder="Feet"
+           oninput="Converter(this.value)" ;
+           onchange="Converter(this.value)">;
+</p>
+<p>Met : <span id="outputMet"></span></p>
+<script>
+    function Converter(valNum){
+        valNum = parseFloat(valNum);
+        document.getElementById("outputMet").innerHTML =valNum/0.3048;
+    }
+</script>
+</body>
+</html>

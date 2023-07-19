@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numBer1 = +prompt("Nhập số thứ 1.");
+    let numBer2 = +prompt("Nhập số thứ 2.");
+    function doSth(numBer1,numBer2){
+        let c = numBer1;
+        numBer1 = numBer2;
+        numBer2 = c;
+        document.write(numBer1, numBer2);
+    }
+
+    doSth(numBer1, numBer2);
+
+</script>
+</body>
+</html>

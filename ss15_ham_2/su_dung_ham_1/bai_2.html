@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>value</label>
+<input id="inputValue" type="number" placeholder="value"
+       oninput="total(this.value)" ;
+       onchange="total(this.value)">;
+</p>
+<p>add : <span id="outputAdd"></span></p>
+<script>
+  function total(valNum){
+    valNum = parseFloat(valNum);
+    document.getElementById("outputAdd").innerHTML =valNum+1;
+  }
+</script>
+</body>
+</html>

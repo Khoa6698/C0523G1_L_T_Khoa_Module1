@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numBer1 = +prompt("Số nguyên thứ nhất.");
+    let numBer2 = +prompt("Số nguyên thứ hai.");
+    let numBer3 = +prompt("Số nguyên thứ ba.");
+
+    function minValue() {
+        if ((numBer1 < numBer2) && (numBer1 < numBer3)) {
+            alert(numBer1 + "Là số nhỏ nhất");
+        } else if ((numBer2 < numBer1) && (numBer2 < numBer3)) {
+            alert(numBer2 + "Là số nhỏ nhất");
+        } else {
+            alert(numBer3 + "Là số nhỏ nhất.");
+        }
+    }
+
+    minValue();
+</script>
+</body>
+</html>

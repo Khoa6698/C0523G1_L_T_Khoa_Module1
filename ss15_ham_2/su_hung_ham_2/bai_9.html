@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ['a', 'b', 'c', 'b', 'e', 'r', 'k'];
+    let anyCharacter = prompt("Ki tự.");
+
+    function display(array, anyCharacter) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === anyCharacter) {
+                count++;
+            }
+        }
+
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    document.write(display(array, anyCharacter).toString());
+</script>
+</body>
+</html>
