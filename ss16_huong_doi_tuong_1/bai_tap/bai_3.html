@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(name, battery, draft, inbox, outbox, status) {
+            this.name = name;
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+
+        checkStatus() {
+            if (this.status) {
+                document.write(this.name, "Điện thoại đang On.");
+            } else {
+                document.write("Điên thoại đang Off.");
+            }
+            this.battery--;
+        }
+
+        turnOn() {
+            if (this.status) {
+                document.write("Điện thoại đang On.");
+            } else {
+                this.status = false;
+                this.battery--;
+            }
+        }
+
+        setBattery(newBattery) {
+            this.battery = newBattery;
+        }
+
+        setMessageDraft(message) {
+            if (this.status) {
+                this.draft.unshift(message);
+                this.battery--;
+            } else {
+                document.write(this.name, "Điện thoại đang tắt cần bật.");
+            }
+        }
+
+        sendMessage(message, otherMobile) {
+            if (this.status) {
+                this.outbox.unshift(message);
+                otherMobile.inbox.unshift(message);
+                this.battery--;
+            } else {
+                document.write(this.name, "Điện thoại đang tắt.");
+            }
+        }
+    }
+
+    let nokia = new Phone("Nokia", 50, [], [], [], false);
+    let iphone = new Phone("Iphone", 50, [], [], [], false);
+
+    nokia.checkStatus();
+    iphone.checkStatus();
+
+    nokia.turnOn();
+    nokia.sendMessage("Tối nay rảnh không.", iphone);
+    nokia.sendMessage("Alo??????", iphone);
+
+    console.log(iphone.inbox);
+    console.log("pin nokia", nokia.battery);
+
+    iphone.turnOn();
+    iphone.sendMessage("Ok mày, tối đi.");
+    console.log(nokia.inbox);
+
+</script>
+</body>
+</html>

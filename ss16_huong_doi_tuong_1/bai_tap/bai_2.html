@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let doC = +prompt("Nhập độ C, nhiệt độ không thấp hơn -273 độ C");
+    class convert {
+        setValue(poison) {
+            while (poison < -273) {
+                alert("Xin đọc hiêu tiếng việt.");
+                poison = +prompt("Nhập độ C");
+            }
+            this.poison = poison;
+        }
+
+        getPoison() {
+            return this.poison;
+        }
+
+        getDegreesF() {
+            return this.poison * 1.8 + 32;
+        }
+
+        getKelven() {
+            return this.poison + 273.15;
+        }
+
+    }
+
+    let newConvert = new convert();
+    newConvert.setValue(+prompt("Nhập vào nhiệt độ Celsius"));
+    document.write(newConvert.getDegreesF() + " Độ F <br>");
+    document.write(newConvert.getKelven() + " Độ Kelvin");
+</script>
+</body>
+</html>
