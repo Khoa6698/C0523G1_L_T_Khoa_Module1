@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Interact {
+        constructor(energy, battery, status) {
+            this.energy = energy;
+            this.battery = battery;
+            this.status = status;
+        }
+
+        setEnergy(newEnergy) {
+            this.energy = newEnergy;
+        }
+
+        getEnergy() {
+            this.energy = energy;
+        }
+
+        decreaseEnergy() {
+            if (this.status = true) {
+                this.energy--;
+            } else {
+                alert("Năng lượng không đổi.")
+            }
+        }
+
+        setBattery(newBattery) {
+            this.battery = newBattery;
+        }
+
+        getBatteryInfo() {
+            return this.battery.getEnergy();
+        }
+
+        lightStatus() {
+            if (this.status) {
+                alert("Lighting");
+            } else {
+                alert("Not lighting");
+            }
+        }
+
+        turnOn() {
+            if (this.status) {
+                document.write("Đèn đang sáng");
+                this.battery--;
+            } else {
+                this.status = false;
+                document.write("Đèn đang tắt");
+
+            }
+        }
+
+    }
+
+    let flashLamp = new Interact(80, 30, true);
+    flashLamp.turnOn()
+    flashLamp.decreaseEnergy()
+
+    console.log(flashLamp);
+    console.log("Đèn" + flashLamp.status);
+    console.log("pin" + flashLamp.energy)
+
+</script>
+</body>
+</html>
