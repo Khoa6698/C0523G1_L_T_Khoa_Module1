@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function vowel(str1) {
+        let vowel = 'ouiaeOUIAE';
+        let count = 0;
+
+        for (var x = 0; x < str1.length; x++) {
+            if (vowel.indexOf(str1[x]) !== -1) {
+                count += 1;
+            }
+
+        }
+        return count;
+    }
+
+    document.write(vowel("Le Tu Khoa"));
+</script>
+</body>
+</html>

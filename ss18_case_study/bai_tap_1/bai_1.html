@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let wage = +prompt("Nhập lương của bạn khi chưa tính thuế. Đơn vị triệu đồng");
+    if (wage < 7) {
+        alert(" Thuế bạn phải đóng là: " + 5 + "%" + " Lương ròng bạn nhận đc là = " + (wage-(wage * 0.05)));
+    } else if (wage < 15) {
+        alert(" Thuế bạn phải đóng là: " + 10 + "%" + " Lương ròng bạn nhận đc là = " + (wage -(wage * 0.1)));
+    } else {
+        alert(" Thuế bạn phải đóng là: " + 20 + "%" + " Lương ròng bạn nhận đc là = " + (wage - (wage * 0.2)));
+    }   
+</script>
+</body>
+</html>
