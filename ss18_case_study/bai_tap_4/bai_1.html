@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let word = prompt("nhap xau");
+    const convertWordToLowerCase = word.toLowerCase();
+    const arr = convertWordToLowerCase.trim().split(' ')
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ' ') {
+            continue
+        }
+
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        result.push(arr[i])
+
+    }
+    
+    console.log(result.join(" "))
+</script>
+</body>
+</html>

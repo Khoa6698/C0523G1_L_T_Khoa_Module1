@@ -6,20 +6,18 @@
 </head>
 <body>
 <script>
+
     function vowel(str1) {
-        let vowel = 'ouiaeOUIAE';
-        let count = 0;
-
-        for (var x = 0; x < str1.length; x++) {
-            if (vowel.indexOf(str1[x]) !== -1) {
-                count += 1;
+        let vowel1 = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+        for (var x = 0; x <= vowel1.length; x++) {
+            if (str1 === vowel1[x]) {
+                console.log("Là nguyên âm.");
             }
-
         }
-        return count;
+        console.log("Đây là phụ âm");
     }
-
-    document.write(vowel("Le Tu Khoa"));
+    let str2 = prompt("Nhập từ cần kiểm tra");
+    vowel(str2)
 </script>
 </body>
 </html>

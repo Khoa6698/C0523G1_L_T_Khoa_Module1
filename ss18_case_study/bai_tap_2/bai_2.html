@@ -7,9 +7,9 @@
 <body>
 
 <script>
-    const i = 5;
-    for (let j = 1; j <= i; j++) {
-        for (let k = i; k > j; k--) {
+    let vertical = +prompt("Chiều dài mong muốn của bạn.");
+    for (let j = 1; j <= vertical; j++) {
+        for (let k = vertical; k > j; k--) {
             document.write("&nbsp;&nbsp;");
         }
         for (let f = 1; f <= j * 2 - 1; f++) {

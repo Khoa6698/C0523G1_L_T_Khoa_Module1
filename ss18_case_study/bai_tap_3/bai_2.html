@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [7, 2, 5, 4, 6, 3, 5, 3];
+    missingValue(arrA, arrB);
+
+    function missingValue(arrA, arrB) {
+        for (let i = 0; i < arrB.length; i++) {
+            for (let j = 0; j < arrA.length; j++) {
+                if (arrB[i] === arrA[j]) {
+                    arrB.splice(i, 1);
+                    break;
+                }
+            }
+        }
+        return arrB;
+    }
+
+    console.log(missingValue(arrA, arrB));
+    // let arrA = [7,2,5,3,5,3] ;
+    // let arrB = [7,2,5,4,6,3,5,3] ;
+    // let missingValue = [];
+    // for (let i = 0; i < arrB.length; i++) {
+    //     if (!arrA.includes(arrB[i]) && !missingValue.includes(arrB[i])) {
+    //         missingValue.push(arrB[i]);
+    //     }
+    // }
+    // missingValue.sort(function (a,b) {
+    //     return a-b;
+    // })
+    // console.log(missingValue);
+
+</script>
+</body>
+</html>

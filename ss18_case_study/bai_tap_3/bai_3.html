@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [10, 12, 14];
+    let denominators = [4, 6, 8];
+    let max = numerators[0] / denominators[0];
+    let index;
+    for (let i = 0; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] < max) {
+            max = numerators[i] / denominators[i]
+            index = i;
+        } else {
+            index = 0
+        }
+    }
+    console.log(numerators[index]+"/"+denominators[index] + " là số lớn nhất , ở ví trí thứ " + index);
+</script>
+</body>
+</html>
