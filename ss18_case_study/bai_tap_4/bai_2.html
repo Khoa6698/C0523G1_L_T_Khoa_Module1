@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = "cabcdreesdsdsdsea";
+    let arrSplit = s.trim().split("");
+    let arrSort = arrSplit.sort();
+    let arr = [];
+    dem = 0;
+    for (let i = 0; i < arrSort.length ; i++) {
+        if (arrSort[i] !== arrSort[i+1]) {
+            arr.push(arrSort[i]);
+            dem++;
+        }
+    }
+
+    console.log(dem, arr.join(","));
+
+
+</script>
+</body>
+</html>

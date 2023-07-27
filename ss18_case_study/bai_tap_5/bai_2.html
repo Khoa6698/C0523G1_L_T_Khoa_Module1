@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime2(n) {
+        if (isNaN(n) || !isFinite(n) || n % 1 || n < 2) return false;
+        if (n % 2 === 0) return (n === 2);
+        let m = Math.sqrt(n);
+        for (let i = 3; i <= m; i += 2) {
+            if (n % i === 0) return false;
+        }
+        return true;
+    }
+
+
+    let arr2Afternoon = [
+        [5, 12, 17, 2, 3],
+        [13, 4, 8, 14, 1],
+        [23, 6, 19, 7, 21]
+    ];
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < arr2Afternoon.length; i++) {
+        for (let j = 0; j < arr2Afternoon[i].length; j++) {
+            if (isPrime2(arr2Afternoon[i][j]) === true) {
+                arr.push(arr2Afternoon[i][j]);
+                count++;
+            }
+        }
+    }
+    document.write(count + ": Số lượng phần tử có trong mãng là số nguyên tố " + "<br>" + " Gồm có: " + arr.join(","));
+</script>
+</body>
+</html>

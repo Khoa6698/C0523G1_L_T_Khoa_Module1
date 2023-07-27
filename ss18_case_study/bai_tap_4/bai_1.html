@@ -6,21 +6,24 @@
 </head>
 <body>
 <script>
-    let word = prompt("nhap xau");
+    let word = prompt("Nhập chuỗi");
     const convertWordToLowerCase = word.toLowerCase();
-    const arr = convertWordToLowerCase.trim().split(' ')
-    let result = []
+    const arr = convertWordToLowerCase.trim().split(' ');
+    let result = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === ' ') {
-            continue
+        if (arr[i] !== '') {
+            result.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
         }
-
-        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-        result.push(arr[i])
-
     }
-    
-    console.log(result.join(" "))
+    console.log("Từ đc nhập vào: " + word);
+    console.log("Từ đã đc chuẩn hóa " + result.join(" "));
+    let max = result[0];
+    for (let i = 1; i < result.length; i++) {
+        if (result[i].length > max.length) {
+            max = result[i];
+        }
+    }
+    console.log("Từ có độ dài lớn nhất: " + max);
 </script>
 </body>
 </html>

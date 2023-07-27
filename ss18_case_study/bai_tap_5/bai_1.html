@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Nhập số lượng m.");
+    let n = +prompt("Nhập số lượng n.");
+    let a = []
+    let chan = [];
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        a[i] = [];
+        for (let j = 0; j < n; j++) {
+            a[i][j] =
+                a[i][j] = +prompt("vui lòng nhập phần tử " + (j + 1) + " trong mảng " + (i + 1));
+            if (a[i][j] % 2 === 0) {
+                chan.push(a[i][j]);
+                sum += a[i][j];
+            }
+        }
+    }
+    document.write("Phần tử bạn đã nhập " + a + "</br>");
+    document.write("Phần tử chẵn đc tìm thấy " + chan + "</br>");
+    document.write("Tổng của các số chẵn " + sum + "</br>");
+</script>
+</body>
+</html>
